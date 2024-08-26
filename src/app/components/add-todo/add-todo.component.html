@@ -1,0 +1,18 @@
+<div class="container mt-3">
+  <h2 class="mb-3">Add Todo</h2>
+  <form [formGroup]="todoForm" (ngSubmit)="addTodo()" class="form-group">
+    <input
+      id="todoText"
+      name="text"
+      formControlName="text"
+      placeholder="Enter todo"
+      class="form-control mb-2"
+      [ngClass]="{'is-invalid': todoForm.get('text')?.invalid && (todoForm.get('text')?.touched || isSubmitted)}"
+    />
+    <!-- Display error message if the field is required and invalid -->
+    <div *ngIf="todoForm.get('text')?.invalid && (todoForm.get('text')?.touched || isSubmitted)" class="invalid-feedback">
+      Todo text is required.
+    </div>
+    <button type="submit" class="btn btn-primary">Add Todo</button>
+  </form>
+</div>

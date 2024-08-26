@@ -1,0 +1,18 @@
+/* .todo-item-enter {
+    opacity: 0;
+  }
+  
+  .todo-item-enter-active {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  
+  .todo-item-leave {
+    opacity: 1;
+  }
+  
+  .todo-item-leave-active {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+   */
